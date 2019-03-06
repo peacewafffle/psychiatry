@@ -5,6 +5,7 @@ summary(x)
 var(x)
 sd(x)
 scale(x) #標準化
+scale(x)*10+50　#偏差値
 var(scale(x)) #標準化により0に
 mean(scale(x))　#標準化により1に
 hist(x, breaks = seq(20, 80, 2.5))
