@@ -8,6 +8,11 @@ ggplot(dat, aes(x=FTF, y=VTC, colour=Diagnosis)) +
   expand_limits(x=0, y=0)+
   xlab("FTF") +
   ylab("VTF") +
-  theme_classic()+
-  theme(aspect.ratio = 1)
+  theme_classic() +
+  theme(aspect.ratio = 1) +
+  theme(axis.text=element_text(size=12),
+      axis.title=element_text(size=14,face="bold"),
+  legend.title = element_text(face = "bold", size = 14, hjust = 0),
+  legend.text =  element_text(size = 14))+
+  geom_smooth(method = "lm", se = F)
 ggsave("/Users/peacewaffle/Desktop/JINTEREST study A/MoCA/Analysis/plot.png", height=5,width=5,dpi=300,units="in")
