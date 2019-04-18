@@ -24,8 +24,9 @@ ggp<- ggplot(dat, aes(x=FTF, y=VTC, colour=Diagnosis)) +
         legend.title = element_text(face = "bold", size = 14, hjust = 0),
         legend.text =  element_text(size = 14))+
   geom_smooth(method = "lm", se = F)
+ggp
 
 lyr_a <- ggp +
-  annotate("text", label = paste0("y==", slope_a, "*x + ", intc), x = 10, y = 30, parse = TRUE, size = 5) +
+  annotate("text", label = paste0("y==", slope_a, "*x + ", intc_a), x = 10, y = 30, parse = TRUE, size = 5) +
   annotate("text", label = paste0("R2==", rsq_a), x = 10, y = 28, parse = TRUE, size = 5)
 lyr_a
